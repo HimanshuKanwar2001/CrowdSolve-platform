@@ -66,7 +66,13 @@ export default function Posts() {
     formData.append("location", location);
     if (imageFile) formData.append("image", imageFile);
 
-    await newPost(formData);
+    console.log("formData", formData);
+    await newPost({
+      title: title,
+      description: description,
+      image: imageFile,
+      location: location,
+    });
 
     // Reset
     setTitle("");

@@ -30,7 +30,7 @@ export const createPost = async (req, res) => {
   const { title, description, image, location } = req.body;
   const userId = req.userId; // Assuming userId is set in the request by middleware
   // console.log(req.userId);
-  // console.log(userId);
+  console.log("req.body", req.body);
   try {
     const newPost = new Post({
       title,
